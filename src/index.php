@@ -8,4 +8,4 @@ require 'controlers/OrderTicket.php';
 
 $database = new Database('mysql', 'my_database', 'my_user', 'user_password');
 $order = new OrderTicket(1, '2023-06-15', ['Lgota', 'Lgota', 'Old', 'Old', 'Lgota']); 
-$order->bookOrder($database);
+$order->makeOrder($database);

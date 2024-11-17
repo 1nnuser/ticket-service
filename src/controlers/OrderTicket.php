@@ -42,7 +42,7 @@ class OrderTicket {
     }
 
     // Метод для бронирования заказа
-    public function bookOrder(Database $database): void {
+    public function makeOrder(Database $database): void {
         try {
             $this->log('📢 Лог панель');
             $this->checkBarcode();
