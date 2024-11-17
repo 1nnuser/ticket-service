@@ -1,0 +1,38 @@
+version: '3'
+services:
+  php:
+    build:
+      context: ./docker/php
+    volumes:
+      - './src:/var/www/html'
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - './src:/var/www/html'
+      - './docker/nginx/conf.d:/etc/nginx/conf.d'
+
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password  # Пароль для пользователя root
+      MYSQL_DATABASE: my_database          # Имя создаваемой базы данных
+      MYSQL_USER: my_user                  # Имя нового пользователя
+      MYSQL_PASSWORD: user_password         # Пароль для нового пользователя
+    volumes:
+      - './docker/volume/mysql:/var/lib/mysql'
+    ports:
+      - "3306:3306"  # Порт для доступа к MySQL
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8080:80"  # Порт для доступа к phpMyAdmin
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: my_user                      # Имя пользователя для phpMyAdmin
+      PMA_PASSWORD: user_password             # Пароль для пользователя
+    depends_on:
+      - mysql
