@@ -1,5 +1,5 @@
 # Ticket service
-Тестовое задание.
+Нативное приложение PHP с выводом информации через логи в браузер. 
 
 # Getting Started
 1. Если нет, то https://docs.docker.com/compose/install/
