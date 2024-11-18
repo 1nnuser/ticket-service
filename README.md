@@ -3,10 +3,10 @@
 
 # Getting Started
 1. Если нет, то [Установить Docker Compose](https://docs.docker.com/compose/install/) (v2.10+)
-2. Запустить `docker compose build --no-cache` для билда свежего образа
-3. Импорт данных `docker exec -i ticket-service-mysql-1 mysql -u my_user -puser_password my_database < backup.sql
-ticket-service-mysql-1`
-4. Открыть `https://localhost` в браузере // `https://localhost:8080` - Для phpMyAdmin
+2. Запустить `docker compose build` для билда свежего образа
+3. Запуск `docker compose up -d`
+4. Импорт данных `docker exec -i ticket-service-mysql-1 mysql -umy_user -puser_password my_database < backup.sql`
+5. Открыть `https://localhost` в браузере // `https://localhost:8080` - Для phpMyAdmin.
 
 # DOCS
 1. [Логика-Приложения](https://github.com/1nnuser/ticket-service/wiki/Логика-Приложения)
