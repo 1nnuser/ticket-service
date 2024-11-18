@@ -12,7 +12,7 @@ ticket-service-mysql-1`
 1. [Логика-Приложения](https://github.com/1nnuser/ticket-service/wiki/Логика-Приложения)
 2. [Визуализация-Таблиц](https://github.com/1nnuser/ticket-service/wiki/Визулизация-таблиц)
 3. [OrderTiket class](https://github.com/1nnuser/ticket-service/wiki/OrderTiket-class)
-4. [https://github.com/1nnuser/ticket-service/wiki/OrderTiket-class](https://github.com/1nnuser/ticket-service/wiki/TicketManager-class)
+4. [OrderTiket-class](https://github.com/1nnuser/ticket-service/wiki/TicketManager-class)
 
 # Вопросы при разработке
 Как я понимаю, что сторонние API сначала валидирует barcode, т.е. проверяют его на уникальность, а потом второй endpoint это уже проверка на наличие билетов и т.д. Т.е, получается сторонний сервис знает об стоиомости билетов и ему лишь нужны данные для проверки уникальности кода и проверки наличие билетов на определенные ивенты. 
