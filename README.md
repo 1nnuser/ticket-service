@@ -2,7 +2,7 @@
 Нативное приложение PHP с выводом информации через логи в браузер. 
 
 # Getting Started
-1. Если нет, то [Установить Docker Compose]((https://docs.docker.com/compose/install/) (2.10+)
+1. Если нет, то [Установить Docker Compose](https://docs.docker.com/compose/install/) (2.10+)
 2. Запустить `docker compose build --no-cache` для билда свежего образа
 3. Импорт данных `docker exec -i ticket-service-mysql-1 mysql -u my_user -puser_password my_database < backup.sql
 ticket-service-mysql-1`
