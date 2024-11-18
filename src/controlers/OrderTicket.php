@@ -48,7 +48,7 @@ class OrderTicket {
             $this->checkBarcode();
             $barcodes = $this->generateBarcodes();
             $this->approveOrder();
-            $this->ticketManager->test($database, $barcodes);
+            $this->ticketManager->purchaseTickets($database, $barcodes);
             $this->log('📈 Запись добавлена в БД');
         } catch (Exception $e) {
             $this->log('🔴 Ошибка: ' . $e->getMessage());

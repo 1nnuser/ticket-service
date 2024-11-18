@@ -3,7 +3,7 @@
 // Вынесеная модель для работы с БД
 
 class TicketManager {
-    public function test(Database $database, $array_user) {
+    public function purchaseTickets(Database $database, $array_user) {
         try {
             // Начало транзакции
             $database->beginTransaction();
